@@ -1,0 +1,41 @@
+To understand the capabilities of the Angular framework, you need to learn about the following:
+
+1.Components
+2.Templates
+3.Directives
+4.Dependency injection
+
+
+1.Components : Components are the main building block for Angular applications. Each component consists of:
+
+i An HTML template that declares what renders on the page
+ii A TypeScript class that defines behavior
+iii A CSS selector that defines how the component is used in a template
+iV Optionally, CSS styles applied to the template
+
+Creating a component using the Angular CLI 
+
+From a terminal window, navigate to the directory containing your application.
+Run the ng generate component <component-name> command, where <component-name> is the name of your new component.
+By default, this command creates the following:
+
+A directory named after the component
+A component file, <component-name>.component.ts
+A template file, <component-name>.component.html
+A CSS file, <component-name>.component.css
+A testing specification file, <component-name>.component.spec.ts
+
+2. Templates : A template is a block of HTML that tells Angular how to render the component in your application. Define a template for your component in one of two ways: by referencing an external file, or directly within the component.
+
+To define a template as an external file, add a templateUrl property to the @Component decorator.
+a) @Component({
+  selector: 'app-component-overview',
+  templateUrl: './component-overview.component.html',
+})
+
+To define a template within the component, add a template property to the @Component decorator that contains the HTML you want to use.
+b) @Component({
+  selector: 'app-component-overview',
+  template: '<h1>Hello World!</h1>',
+})
+
